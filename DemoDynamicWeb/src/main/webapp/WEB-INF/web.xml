@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>DemoDynamicWeb</display-name>
+  <servlet>
+    <description>Adds two numbers num1 and num2</description>
+    <display-name>AddServlet</display-name>
+    <servlet-name>Adds</servlet-name>
+    <servlet-class>com.demo.AddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Adds</servlet-name>
+    <url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SquareServlet</display-name>
+    <servlet-name>SquareServlet</servlet-name>
+    <servlet-class>com.demo.SquareServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SquareServlet</servlet-name>
+    <url-pattern>/SquareServlet/</url-pattern>
+  </servlet-mapping>
+</web-app>
