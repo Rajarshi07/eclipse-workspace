@@ -13,5 +13,32 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/JSTL/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/jdbc/ojdbc8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/jdbc/ojdbc8_g.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/jdbc/ojdbc8dms.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/jdbc/ojdbc8dms_g.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/jdbc/ojdbc11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/jdbc/ojdbc11_g.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/jdbc/ojdbc11dms.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/jdbc/ojdbc11dms_g.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/jdbc/rsi.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/jdbc/simplefan.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/dms.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/ojdbc11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/ojdbc11_g.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/ojdbc11dms.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/ojdbc11dms_g.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/ons.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/oraclepki.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/orai18n.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/osdt_cert.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/osdt_core.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/rsi.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/simplefan.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/ucp11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/xdb.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/xmlparserv2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/RAJARSHID/Downloads/ojdbc11-full/ojdbc11-full/xmlparserv2_sans_jaxp_services.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

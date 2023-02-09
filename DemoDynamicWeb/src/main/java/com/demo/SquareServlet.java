@@ -14,6 +14,7 @@ import java.io.PrintWriter;
 /**
  * Servlet implementation class SquareServlet
  */
+@WebServlet("/SquareServlet/")
 public class SquareServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
