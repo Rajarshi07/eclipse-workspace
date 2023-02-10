@@ -23,8 +23,8 @@ public class JDBC_Connect {
 			smt.executeUpdate("CREATE TABLE EMP(ENO NUMBER,ENAME VARCHAR(20),ESAL NUMBER)");
 //			boolean out = smt.execute("SELECT * FROM EMPLOYEE");
 //			smt.getResultSet();
-//			smt.execute("create user rajarshi identified by Oracle_1");
-//			smt.execute("grant all privileges to rajarshi");
+			smt.execute("create user rajarshi identified by Oracle_1");
+			smt.execute("grant all privileges to rajarshi");
 			System.out.println("Connection");
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
