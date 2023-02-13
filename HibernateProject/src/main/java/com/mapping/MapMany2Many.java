@@ -16,10 +16,10 @@ public class MapMany2Many {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<Employee> el1=new ArrayList<>();
-		List<Project> pl1=new ArrayList<>();
-		List<Employee> el2=new ArrayList<>();
-		List<Project> pl2=new ArrayList<>();
+		List<Employee> el1=new ArrayList<Employee>();
+		List<Project> pl1=new ArrayList<Project>();
+		List<Employee> el2=new ArrayList<Employee>();
+		List<Project> pl2=new ArrayList<Project>();
 		for(int i=0;i<3;i++) {
 			el1.add(new Employee("EMP_L1_"+(i+1)));
 			pl1.add(new Project("HRMS_L1_"+(i+1)));

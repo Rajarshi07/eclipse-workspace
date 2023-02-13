@@ -27,7 +27,7 @@ public class MapDemo {
 		Question q2=new Question("Question2?");
 		Answer a2=new Answer("Ans2");
 		q2.setAns(a2);
-		List<Answer> a=new ArrayList<>();
+		List<Answer> a=new ArrayList<Answer>();
 		QuestionO2M qm=new QuestionO2M("What are the 4 oop concepts?");
 		a.add(new Answer("Encapsulation"));
 		a.add(new Answer("Polymorphism"));

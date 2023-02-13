@@ -8,11 +8,17 @@
 		<property name="connection.username">rajarshi</property>
 		<property name="connection.password">ihsrajar</property>
 		<!-- Echo the SQL to stdout -->
-		<property name="show_sql">true</property>
 		<property name="hbm2ddl.auto">update<!-- create-drop --><!-- create --></property>
 		<property name="show_sql">true</property>
 		<!-- Select our SQL dialect -->
 		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		
+		<!-- Cacheing -->
+		<!--  -->
+		<property name="cache.use_second_level_cache">true</property>
+		<property name="cache.region.factory_class">org.hibernate.cache.ehcache.internal.EhcacheRegionFactory</property>
+		
+		<!-- ORM Mapping -->
 		<mapping class="com.hibernate.HibernateProject.Student"></mapping>
 		<mapping class="com.mapping.Question"></mapping>
 		<mapping class="com.mapping.QuestionO2M"></mapping>

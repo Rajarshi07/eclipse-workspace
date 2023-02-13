@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<bean class="com.springcore.constructorInjection.Certi" name="c1">
+		<constructor-arg>
+			<value>Programming in Java</value>
+		</constructor-arg>
+	</bean>
+	<bean class="com.springcore.constructorInjection.Certi" name="c2">
+		<constructor-arg value="Programming in Python" />
+	</bean>
+	<bean class="com.springcore.constructorInjection.Person" name="p1">
+		<constructor-arg name="name" value="rajarshi" />
+		<constructor-arg name="pId">
+			<value>1</value>
+		</constructor-arg>
+		<constructor-arg name="cert">
+			<ref bean="c1"></ref>
+		</constructor-arg>
+	</bean>
+	<bean class="com.springcore.constructorInjection.Person" name="p2"
+		c:pId="2" c:name="Swairik" c:cert-ref="c2" />
+</beans>

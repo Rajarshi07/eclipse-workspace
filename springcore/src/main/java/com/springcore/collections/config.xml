@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springcore.collections.Emp" name="emp1">
+		<property name="name" value="Rajarshi"></property>
+		<property name="phones">
+			<list>
+				<value>9876543210</value>
+				<value>1234567890</value>
+				<value>1658267811</value>
+			</list>
+		</property>
+		<property name="addresses">
+			<set>
+				<value>Kolkata</value>
+				<value>Delhi</value>
+				<value>Mumbai</value>
+			</set>
+		</property>
+		<property name="courses">
+			<map>
+				<entry key="c1" value="C++" />
+				<entry key="c2" value="Python" />
+				<entry key="c3" value="Javascript" />
+				<entry key="c4" value="Java" />
+			</map>
+		</property>
+	</bean>
+</beans>

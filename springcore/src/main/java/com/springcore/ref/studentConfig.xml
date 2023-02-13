@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean class="com.springcore.ref.Address" name="a1" p:street="a1-street" p:city="a1-city" p:state="a1-state" p:country="a1-country"/>
+	<bean class="com.springcore.ref.Address" name="a2" p:street="a2-street" p:city="a2-city" p:state="a2-state" p:country="a2-country"/>
+	<bean class="com.springcore.ref.Student" name="s1" p:id="1" p:name="s1-name" p:address-ref="a1"/>
+	<bean class="com.springcore.ref.Student" name="s2" p:id="2" p:name="s2-name" p:address-ref="a2"/>
+</beans>
