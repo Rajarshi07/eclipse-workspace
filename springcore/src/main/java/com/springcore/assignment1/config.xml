@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
@@ -9,20 +10,14 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<bean class="com.springcore.ref.B" name="b1">
-		<property name="bid" value="101" />
-	</bean>
-	<bean class="com.springcore.ref.A" name="a1" p:id="1"
-		p:obj-ref="b1" />
-	<bean class="com.springcore.ref.A" name="a2">
-		<property name="id" value="2" />
-		<property name="obj" ref="b1"></property>
-	</bean>
-	<bean class="com.springcore.ref.A" name="a3">
-		<property name="id" value="3" />
-		<property name="obj">
-			<ref bean="b1" />
-		</property>
-	</bean>
-
+	<context:component-scan
+		base-package="com.springcore.assignment1"></context:component-scan>
+	<util:list id="contacts" list-class="java.util.ArrayList">
+		<value>9876543210</value>
+		<value>9865743210</value>
+	</util:list>
+	<util:list id="projects" list-class="java.util.ArrayList">
+		<value>C++</value>
+		<value>Python</value>
+	</util:list>
 </beans>

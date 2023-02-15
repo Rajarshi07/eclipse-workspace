@@ -27,7 +27,8 @@ public class MapMany2Many {
 			pl2.add(new Project("Database Module_L2"+(i+1)));
 		}
 		pl1.get(0).setEmp(el1);
-		el1.get(2).setProject(pl2);
+		pl2.get(0).setEmp(el2);
+		el1.get(0).setProject(pl2);
 		Configuration cfg = new Configuration();
 		cfg.configure("com/hibernate/HibernateProject/hibernate.cfg.xml");
 		SessionFactory factory = cfg.buildSessionFactory();

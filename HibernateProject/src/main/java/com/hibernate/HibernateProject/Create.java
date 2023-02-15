@@ -17,7 +17,7 @@ public class Create {
 
 		System.out.println("Hello World!");
 
-		Student s=new Student("swairik","kolkata");
+		Student s=new Student("rajarshi","kolkata");
 
 		Session session = factory.openSession();
 		Transaction tx= session.beginTransaction();

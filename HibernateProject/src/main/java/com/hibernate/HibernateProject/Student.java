@@ -7,12 +7,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
 @Entity
-@Table(name = "studentTable")
+//@Table(name = "studentTable")
 @Cacheable
 @Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class Student {
@@ -22,7 +23,8 @@ public class Student {
 	private String name;
 //	@Transient //-- doesnt save this field to db
 	private String city;
-	@Embedded
+//	@Embedded
+	@Transient
 	private Certificate cert;
 
 

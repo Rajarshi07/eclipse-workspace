@@ -29,4 +29,25 @@
 	</bean>
 	<bean class="com.springcore.constructorInjection.Person" name="p2"
 		c:pId="2" c:name="Swairik" c:cert-ref="c2" />
+	<bean class="com.springcore.constructorInjection.Addition"
+		name="a1">
+		<constructor-arg value="1"></constructor-arg>
+		<constructor-arg value="2"></constructor-arg>
+	</bean>
+	<bean class="com.springcore.constructorInjection.Addition"
+		name="a2">
+		<constructor-arg value="1" type="double"></constructor-arg>
+		<constructor-arg value="2" type="double"></constructor-arg>
+	</bean>
+	<bean class="com.springcore.constructorInjection.Addition"
+		name="a3">
+		<constructor-arg value="1" type="int"></constructor-arg>
+		<constructor-arg value="2" type="int"></constructor-arg>
+	</bean>
+	<bean class="com.springcore.constructorInjection.Addition"
+		name="a4">
+		<constructor-arg value="1" type="String"></constructor-arg>
+		<constructor-arg value="2" type="String"></constructor-arg>
+	</bean>
+
 </beans>

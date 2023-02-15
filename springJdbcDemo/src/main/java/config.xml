@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
 	xmlns:util="http://www.springframework.org/schema/util"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-
-	<bean class="com.springcore.ref.B" name="b1">
-		<property name="bid" value="101" />
+	<bean
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		name="ds">
+		<property name="driverClassName"
+			value="com.mysql.cj.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/db1?useSSL=false" />
+		<property name="username" value="rajarshi" />
+		<property name="password" value="ihsrajar" />
 	</bean>
-	<bean class="com.springcore.ref.A" name="a1" p:id="1"
-		p:obj-ref="b1" />
-	<bean class="com.springcore.ref.A" name="a2">
-		<property name="id" value="2" />
-		<property name="obj" ref="b1"></property>
+	<bean class="org.springframework.jdbc.core.JdbcTemplate"
+		name="jdbcTemplate">
+		<property name="dataSource" ref="ds" />
 	</bean>
-	<bean class="com.springcore.ref.A" name="a3">
-		<property name="id" value="3" />
-		<property name="obj">
-			<ref bean="b1" />
-		</property>
+	<bean class="com.spring.jdbcDemo.dao.StudentDaoImpl"
+		name="studentDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate" />
 	</bean>
-
 </beans>

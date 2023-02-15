@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config></context:annotation-config>
+	<bean class="com.springcore.autowire.Address" name="address"
+		c:street="Jadavpur" c:city="Kolkata"></bean>
+	<!-- <bean class="com.springcore.autowire.Emp" name="e1" c:name="Rajarshi" 
+		c:address-ref="a1"></bean> <bean class="com.springcore.autowire.Emp" name="e2" 
+		c:name="Sagnik" c:address-ref="a2"></bean> <bean class="com.springcore.autowire.Address" 
+		name="a2" c:street="Garia" c:city="Kolkata"></bean> <bean class="com.springcore.autowire.Emp" 
+		name="e2" autowire="constructor" c:name="sagnik"></bean> -->
+	<bean class="com.springcore.autowire.Emp" name="e1"
+		autowire="byName" p:name="rajarshi"></bean>
+
+	<bean class="com.springcore.autowire.Emp" name="e2"
+		p:name="sagnik"></bean>
+</beans>

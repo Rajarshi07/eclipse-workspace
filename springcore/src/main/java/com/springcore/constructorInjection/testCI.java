@@ -20,7 +20,14 @@ public class testCI {
         Person p2=(Person)ctx.getBean("p2");
         System.out.println(p2);
 
-
+        Addition a1=(Addition)ctx.getBean("a1");
+        a1.doSum();
+        Addition a2=(Addition)ctx.getBean("a2");
+        a2.doSum();
+        Addition a3=(Addition)ctx.getBean("a3");
+        a3.doSum();
+        Addition a4=(Addition)ctx.getBean("a4");
+        a4.doSum();
 	}
 
 }
