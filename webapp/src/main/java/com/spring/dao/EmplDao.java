@@ -1,14 +1,15 @@
-package com.springdemo.orm.dao;
+package com.spring.dao;
 
 import java.util.List;
 
-import org.springframework.orm.hibernate5.HibernateTemplate;
-
-import com.springdemo.orm.model.Student;
-
 import javax.transaction.Transactional;
 
-public class StudentDao {
+import org.springframework.orm.hibernate5.HibernateTemplate;
+
+import com.spring.model.Empl;
+
+
+public class EmplDao {
 	private HibernateTemplate hibernateTemplate;
 
 	public HibernateTemplate getHibernateTemplate() {
@@ -20,24 +21,24 @@ public class StudentDao {
 	}
 
 	@Transactional
-	public int insert(Student s) {
+	public int insert(Empl s) {
 		int i = (Integer) this.hibernateTemplate.save(s);
 		return i;
 	}
 
-	public Student getStudent(int id) {
-		Student s = this.hibernateTemplate.get(Student.class, id);
+	public Empl getEmpl(int id) {
+		Empl s = this.hibernateTemplate.get(Empl.class, id);
 		return s;
 	}
 
-	public List<Student> getAllStudents() {
-		List<Student> s = this.hibernateTemplate.loadAll(Student.class);
+	public List<Empl> getAllEmpl() {
+		List<Empl> s = this.hibernateTemplate.loadAll(Empl.class);
 		return s;
 	}
 
 	@Transactional
 	public void delete(int id) {
-		Student s = getStudent(id);
+		Empl s = getEmpl(id);
 		try {
 			this.hibernateTemplate.delete(s);
 		} catch (Exception e) {
@@ -46,7 +47,7 @@ public class StudentDao {
 	}
 
 	@Transactional
-	public void update(Student s) {
+	public void update(Empl s) {
 		try {
 			this.hibernateTemplate.update(s);
 		} catch (Exception e) {
@@ -54,7 +55,9 @@ public class StudentDao {
 		}
 	}
 
-	public StudentDao() {
+	
+
+	public EmplDao() {
 		// TODO Auto-generated constructor stub
 	}
 
