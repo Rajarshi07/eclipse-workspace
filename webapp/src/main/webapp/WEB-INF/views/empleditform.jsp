@@ -10,7 +10,7 @@
 </head>
 <body>
 	<h1>Update Employee Information</h1>
-	<form:form method="post" action="update">
+	<form:form method="post" action="/webapp/update">
 		<table>
 
 			<tr>

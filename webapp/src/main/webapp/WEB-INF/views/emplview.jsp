@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1" isELIgnored="false"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 </head>
 <body>
 	<h1>Employees List</h1>
-	<a href="emplform">Add new employee</a>
+	<a href="emplcreateform">Add new employee</a>
 	<table border="1">
 		<tr>
 			<th>ID</th>
@@ -22,11 +22,11 @@
 		</tr>
 		<c:forEach var="empl" items="${list}">
 			<tr>
-				<td>${empl.id}</td>
+				<td><c:out value="${empl.id}"/></td>
 				<td>${empl.name}</td>
 				<td>${empl.salary}</td>
 				<td>${empl.designation}</td>
-				<td><a href="editempl/${empl.id}">Edit</a></td>
+				<td><a href="empleditform/${empl.id}">Edit</a></td>
 				<td><a href="deleteempl/${empl.id}">Delete</a></td>
 			</tr>
 		</c:forEach>

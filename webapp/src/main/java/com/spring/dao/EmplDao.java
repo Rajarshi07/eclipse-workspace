@@ -26,19 +26,19 @@ public class EmplDao {
 		return i;
 	}
 
-	public Empl getEmpl(int id) {
+	public Empl getEmplById(int id) {
 		Empl s = this.hibernateTemplate.get(Empl.class, id);
 		return s;
 	}
 
-	public List<Empl> getAllEmpl() {
+	public List<Empl> getEmpl() {
 		List<Empl> s = this.hibernateTemplate.loadAll(Empl.class);
 		return s;
 	}
 
 	@Transactional
 	public void delete(int id) {
-		Empl s = getEmpl(id);
+		Empl s = getEmplById(id);
 		try {
 			this.hibernateTemplate.delete(s);
 		} catch (Exception e) {
